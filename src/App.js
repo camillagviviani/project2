@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+
+import ActivityCooking from "./components/activityCooking";
+import ActivityRecreational from "./components/activityRecreational";
+import ActivityMusic from "./components/activityMusic";
+import ActivityRandom from "./components/activityRandom";
+import ActivityDiy from "./components/activityDiy";
+import ActivityBusywork from "./components/activityBusywork";
+import ActivityEducational from "./components/activityEducational";
+import ActivityCharity from "./components/activityCharity";
+import ActivityRelaxation from "./components/activityRelaxation";
+import Header from "./components/header";
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <ActivityRecreational />
+      <ActivityCooking />
+      <ActivityMusic />
+      <ActivityRandom />
+      <ActivityDiy />
+      <ActivityBusywork />
+      <ActivityEducational />
+      <ActivityCharity />
+      <ActivityRelaxation />
     </div>
   );
 }
