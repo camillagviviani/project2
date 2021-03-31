@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import axios from 'axios';
-import Activity from "./activity";
+import Activity from "./Activity";
 import Popup from "reactjs-popup";
 
 class ActivityRelaxation extends Component {
@@ -23,9 +23,9 @@ class ActivityRelaxation extends Component {
       const activity = this.state.activity;
       return (
         <section className="ActivityList">
-        <div>
+        <div className="buttonflex">
         <Popup trigger = 
-             { <img className="button" src="\images\social.jpeg" /> } 
+             { <img className="button" src="\images\relaxation.jpeg" /> } 
              modal
              nested>
                <div>

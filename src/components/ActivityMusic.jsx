@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import axios from 'axios';
-import Activity from "./activity";
+import Activity from "./Activity";
 import Popup from "reactjs-popup";
 
 class ActivityMusic extends Component {
@@ -23,7 +23,7 @@ class ActivityMusic extends Component {
       const activity = this.state.activity;
       return (
           <section className="ActivityList">
-              <div>
+              <div className="buttonflex">
               <Popup trigger = 
                    { <img className="button" src="\images\music.jpeg" /> } 
                    modal

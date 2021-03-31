@@ -1,16 +1,16 @@
 import { Component } from 'react';
 import axios from 'axios';
-import Activity from "./activity";
+import Activity from "./Activity";
 import Popup from "reactjs-popup";
 
-class ActivityBusywork extends Component {
+class ActivityRandom extends Component {
     constructor(props) {
         super(props);
         this.state = { activity: [], }; 
     }
 
     fetchData = () => {
-        axios.get('http://www.boredapi.com/api/activity?type=busywork')
+        axios.get('http://www.boredapi.com/api/activity')
         .then(res => 
             this.setState({ activity: res.data}));
     }
@@ -23,9 +23,9 @@ class ActivityBusywork extends Component {
       const activity = this.state.activity;
       return (
         <section className="ActivityList">
-        <div>
+        <div className="buttonflex">
         <Popup trigger = 
-             { <img className="button" src="\images\social.jpeg" /> } 
+             { <img className="button" src="\images\random.jpeg" /> } 
              modal
              nested>
                <div>
@@ -38,4 +38,4 @@ class ActivityBusywork extends Component {
   }
 }
 
-export default ActivityBusywork;
+export default ActivityRandom;

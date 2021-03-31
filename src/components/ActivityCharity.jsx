@@ -1,16 +1,16 @@
 import { Component } from 'react';
 import axios from 'axios';
-import Activity from "./activity";
+import Activity from "./Activity";
 import Popup from "reactjs-popup";
 
-class ActivityEducational extends Component {
+class ActivityCharity extends Component {
     constructor(props) {
         super(props);
         this.state = { activity: [], }; 
     }
 
     fetchData = () => {
-        axios.get('http://www.boredapi.com/api/activity?type=education')
+        axios.get('http://www.boredapi.com/api/activity?type=charity')
         .then(res => 
             this.setState({ activity: res.data}));
     }
@@ -23,13 +23,13 @@ class ActivityEducational extends Component {
       const activity = this.state.activity;
       return (
         <section className="ActivityList">
-        <div>
+        <div className="buttonflex">
         <Popup trigger = 
-             { <img className="button" src="\images\education.jpeg" /> } 
+             { <img className="button" src="\images\charity.jpeg" /> } 
              modal
              nested>
                <div>
-               <Activity key={activity.key} activity={activity} />
+              <Activity key={activity.key} activity={activity} />
              </div>
              </Popup>
         </div>
@@ -38,4 +38,4 @@ class ActivityEducational extends Component {
   }
 }
 
-export default ActivityEducational;
+export default ActivityCharity;

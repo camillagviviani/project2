@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import './activity.css';
 
 class Activity extends Component {
     constructor(props) {
